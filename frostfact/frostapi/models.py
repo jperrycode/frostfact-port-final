@@ -164,12 +164,17 @@ class GalleryData(models.Model):
         IMAGE = 'image', 'image'
         VIDEO = 'video', 'video'
 
+    class EventChoices(models.TextChoices):
+        MUSIC = 'music', 'music'
+        ENTERTAINMENT = 'entertainment', 'entertainment'
+
     gallery_media_title = models.CharField(max_length=100, blank=True, null=True, verbose_name='Image/Video Title')
     gallery_media_description = models.TextField(blank=True, null=True, verbose_name='Image/Video Description')
     gallery_media_image = models.ImageField(upload_to='gallery', blank=True, null=True, verbose_name='Image Upload')
     gallery_media_video = models.URLField(validators=[URLValidator()], blank=True, null=True, verbose_name='Video Link')
     gallery_media_date = models.DateTimeField(default=timezone.now, verbose_name="Image/Video Date")
     gallery_media_type = models.CharField(max_length=100, choices=MediaChoices, blank=True, null=True, verbose_name='Media Type')
+    gallery_event_type = models.CharField(max_length=100, choices=EventChoices, blank=True, null=True, verbose_name='Event Type')
     slug = models.SlugField(unique=True, blank=True, null=True, verbose_name="gallery Slug", editable=False)
     class Meta:
         verbose_name = 'Gallery Data'
