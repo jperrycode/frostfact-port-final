@@ -149,6 +149,8 @@ class FAQData(models.Model):
 
     class Meta:
         verbose_name_plural = 'FAQ Data'
+    def __str__(self):
+        return self.faq_title
 
 
 class PolicyData(models.Model):
@@ -157,6 +159,9 @@ class PolicyData(models.Model):
 
     class Meta:
         verbose_name_plural = 'Policy Data'
+
+    def __str__(self):
+        return self.policy_title
 
 class GalleryData(models.Model):
 
@@ -180,7 +185,8 @@ class GalleryData(models.Model):
         verbose_name = 'Gallery Data'
         verbose_name_plural = 'Gallery Data'
 
-
+    def __str__(self):
+        return self.gallery_media_title
 
     def save(self, *args, **kwargs):
 
@@ -239,7 +245,13 @@ class TextSliderTop(models.Model):
     top_slider_text = models.CharField(max_length=100, blank=True, null=True, verbose_name='Slider Top Text')
     active_text = models.BooleanField(default=False, null=True, verbose_name='Active Text')
 
+    def __str__(self):
+        return self.top_slider_title
+
 class TextSliderBottom(models.Model):
     bottom_slider_title = models.CharField(max_length=20, blank=True, null=False, primary_key=True)
     bottom_slider_text = models.CharField(max_length=100, blank=True, null=True, verbose_name='Slider Bottom Text')
     active_text = models.BooleanField(default=False, null=True, verbose_name='Active Text')
+
+    def __str__(self):
+        return self.bottom_slider_title

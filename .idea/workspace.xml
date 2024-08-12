@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0aa5ffb-8902-42fe-b9d3-8fa8fd4decbf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frostfact/frostapi/migrations/0037_gallerydata_gallery_event_type_and_more.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frostfact/frostapi/migrations/0038_alter_contactformsubmission_event_date_request_and_more.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_25_2024_10_14_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_25_2024_10_14_AM__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frostfact/frostapi/migrations/0039_alter_contactformsubmission_event_date_request_and_more.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frostfact/frostapi/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/frostfact/frostapi/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frostfact/frostapi/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/frostfact/frostapi/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
