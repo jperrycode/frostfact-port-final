@@ -58,7 +58,7 @@ class ContactFormSubmission(models.Model):
     phone = models.CharField(max_length=12, blank=True, null=True, verbose_name="Phone Number")
     first_name = models.CharField(max_length=255, blank=True, null=True, verbose_name="First Name")
     last_name = models.CharField(max_length=255, blank=True, null=True, verbose_name="Last Name")
-    event_date_request = models.DateTimeField(default=datetime.now(), verbose_name="Event Date")
+    event_date_request = models.DateField(default=timezone.now, verbose_name="Event Date")
     message = models.TextField(verbose_name="Message", default='Tell us about your event')
     time_stamp = models.DateTimeField(auto_now_add=True, verbose_name="Timestamp", blank=True, null=True, editable=False)
     slug = models.SlugField(unique=True, blank=True, null=True, verbose_name="Contact Slug", editable=False)
