@@ -47,8 +47,8 @@ class BaseAuthenticatedView(generics.GenericAPIView):
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
             self.perform_create(serializer)
-            return Response(serializer.data, status=201)
-        return Response(serializer.errors, status=400)
+            return Response({"success": True, "data": serializer.data}, status=201)
+        return Response({"success": False, "errors": serializer.errors}, status=400)
 
 class ContactFormApiView(BaseAuthenticatedView, generics.ListCreateAPIView):
     queryset = ContactFormSubmission.objects.all()
